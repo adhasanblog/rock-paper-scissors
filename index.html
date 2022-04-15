@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="bg-gradient-to-t from-bg-clr-1 to-bg-clr-2 bg-no-repeat h-screen overflow-hidden">
+    <div class="flex flex-col mt-47">
+        <!-- Header : Score Board -->
+        <div class="flex flex-row w-702 h-152 border-2 border-header-outline mx-auto rounded-2xl justify-between">
+            <img class="h-[97px] w-[163px] my-auto ml-[31px]" src="./img/logo.svg" />
+            <div class="flex flex-col w-[150px] h-[114px] my-auto mr-[25px] bg-gradient-to-r from-score-board-1 to-score-board-2 rounded-md">
+                <span class="font-barlow text-[16px] font-semibold leading-[19px] tracking-[0.15em] mx-auto mt-4 text-score-text">
+                    SCORE
+                </span>
+                <span class="font-barlow text-[65px] font-bold leading-[78px] mx-auto mb-[8px] text-score-count score">
+                    0
+                </span>
+            </div>
+        </div>
+        <!-- Close Header : Score Board -->
+        <!-- Section : Rock, Paper and Scissors -->
+        <div class="h-[426px] flex flex-col mx-auto mt-[65px] bg-triangle bg-no-repeat bg-center rock-paper-scissors">
+            <div class="flex flex-row w-[478px] justify-between mb-[26px]">
+                <img src="./img/paper.svg" class="h-[200px] w-[200px] paper player" />
+                <img src="./img/scissors.svg" class="h-[200px] w-[200px] scissors player" />
+            </div>
+            <img src="./img/rock.svg" class="h-[200px] w-[200px] mx-auto rock player" />
+        </div>
+        <!-- Close Section : Rock, Paper and Scissors -->
+        <!-- Section : Game -->
+        <div class="h-[390px] w-[678px] flex flex-row mx-auto mt-[65px] game-section justify-between hidden">
+            <div class="flex flex-col w-[300px] rock-vs-ai hidden">
+                <span class="mx-auto text-[24px] text-white font-semibold font-barlow leading-[29px] tracking-[0.13em]">YOU
+                    PICKED</span>
+                <img src="./img/rock.svg" class="h-[300px] w-[300px] mx-auto mt-[61px] player" id="rock" />
+            </div>
+            <div class="flex flex-col w-[300px] paper-vs-ai hidden">
+                <span class="mx-auto text-[24px] text-white font-semibold font-barlow leading-[29px] tracking-[0.13em]">YOU
+                    PICKED</span>
+                <img src="./img/paper.svg" class="h-[300px] w-[300px] mx-auto mt-[61px] player" id="paper" />
+            </div>
+            <div class="flex flex-col w-[300px] scissors-vs-ai hidden">
+                <span class="mx-auto text-[24px] text-white font-semibold font-barlow leading-[29px] tracking-[0.13em]">YOU
+                    PICKED</span>
+                <img src="./img/scissors.svg" class="h-[300px] w-[300px] mx-auto mt-[61px] player" id="scissors" />
+            </div>
+            <div class="flex flex-col w-[220px] h-[130px] mx-[73px] mt-[159px] my-[101px] hidden result">
+                <span class="font-bold font-barlow text-[55px] leading-[66px] tracking-[0.01em] text-white text-center mb-[16px]">TEXT</span>
+                <button class="flex w-[220px] h-[48px] bg-[#FBFBFB]  rounded-[8px] play-again"><span
+                        class="text-center mx-auto my-auto text-[16px] leading-[19px] tracking-[0.16em] font-semibold font-barlow text-[#DC2E4E]">PLAY
+                        AGAIN</span>
+                </button>
+            </div>
+            <div class="flex flex-col w-[300px]">
+                <span class="mx-auto text-[24px] text-white font-semibold font-barlow leading-[29px] tracking-[0.13em]  ">THE
+                    HOUSE
+                    PICKED</span>
+                <img src="./img/ai.svg" class="h-[225px] w-[225px] mx-auto mt-[98px]" id="ai" />
+            </div>
+        </div>
+        <!-- Close Section : Game -->
+        <!-- Section : Rules -->
+        <div class="flex w-screen justify-end top-[920px] absolute">
+            <button class="flex w-[130px] h-[42px] border-2 border-[#606E85] rounded-[9px] mr-[55px] mb-[59px] rules ">
+                <a class="mx-auto my-auto text-white font-barlow font-semibold leading-[19px] tracking-[0.16em] ">
+                    RULES
+                </a>
+            </button>
+        </div>
+        <!-- Close Section : Rules -->
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
